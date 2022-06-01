@@ -14,6 +14,7 @@ private:
         vis[id] = 2;
         return false;
     }
+    
 public:
     bool canFinish(int numCourses, vector<vector<int>>& pre) {
         vector<int> adj[numCourses];

@@ -3,7 +3,7 @@ class Solution {
 private:
     bool isCycle(vector<int> adj[], vector<int> &vis, int id){
         if(vis[id] == 1) return true;
-        
+
         if(vis[id] == 0){
             vis[id] = 1;
             for(auto edge : adj[id]){

@@ -1,6 +1,7 @@
 class NumMatrix {
 private:
     vector<vector<int>> sum;
+    
 public:
     NumMatrix(vector<vector<int>>& matrix) {
         int row = matrix.size();

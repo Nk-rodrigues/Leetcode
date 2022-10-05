@@ -1,14 +1,18 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if(s.length() != t.length()) return false;
-        vector<int> alpha(26);
-        for(int i=0; i<s.length();i++)
-            alpha[s[i]-'a']++;
-        for(int i=0; i<t.length(); i++){
-            int x = --alpha[t[i]-'a'];
-            if(x <0) return false;
+        vector<int> ans(256, 0);
+        for(int i=0; i<s.size(); i++){
+            ans[s[i]-1]++;
         }
+        for(int i=0; i<t.size(); i++){
+            ans[t[i]-1]--;
+        }
+        for(int i=0; i<ans.size(); i++){
+            if (ans[i] != 0) return false;
+        }
+        
         return true;
+        
     }
 };

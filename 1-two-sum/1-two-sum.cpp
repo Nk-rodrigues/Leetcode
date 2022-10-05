@@ -7,6 +7,7 @@ public:
             if(Umap.find(target-nums[i]) != Umap.end()){
                 result.push_back(Umap[target-nums[i]]);
                 result.push_back(i);
+                return result;
             }
             Umap[nums[i]] = i;
         }

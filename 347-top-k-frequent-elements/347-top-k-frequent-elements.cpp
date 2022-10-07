@@ -12,7 +12,7 @@ public:
         }
         reverse(temp.begin(), temp.end());
         vector<int> ans;
-        for(auto& t:temp){
+        for(auto t:temp){
             for(auto val:t){
                 ans.push_back(val);
                 if (ans.size() == k) return ans;

@@ -6,14 +6,14 @@ public:
         
         if (n == 0) return { };
         
-        for(int i=0; i<n; i++) {
+        for(int &num: nums) {
             
-            if (nums[abs(nums[i])-1] < 1) {
-                result.push_back(abs(nums[i]));
+            if (nums[abs(num)-1] < 1) {
+                result.push_back(abs(num));
             }
             
             else {
-                nums[abs(nums[i])-1] *= -1;
+                nums[abs(num)-1] *= -1;
             }
         }
         return result;

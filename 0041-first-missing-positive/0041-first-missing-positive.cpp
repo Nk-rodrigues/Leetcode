@@ -3,10 +3,10 @@ public:
     int firstMissingPositive(vector<int>& nums) {
         int size = nums.size();
         
-        for(int i=0; i<size; i++) {
+        for(int& num: nums) {
             
-            while(nums[i] > 0 and nums[i] <= size and nums[i] != nums[nums[i]-1]) {
-                swap(nums[i], nums[nums[i]-1]);
+            while(num > 0 and num <= size and num != nums[num-1]) {
+                swap(num, nums[num-1]);
             }
         }
         
